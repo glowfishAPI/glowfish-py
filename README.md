@@ -81,4 +81,5 @@ It's important to note that predicting will throw an error if you have not train
 
 **Further Documentation**
 Docs - http://glowfish.readme.io/
+
 Registration - http://glowfi.sh/
