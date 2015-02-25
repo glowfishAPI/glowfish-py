@@ -80,6 +80,6 @@ It's important to note that predicting will throw an error if you have not train
     3
 
 **Further Documentation**
-Docs - http://glowfish.readme.io/
 
+Docs - http://glowfish.readme.io/
 Registration - http://glowfi.sh/
