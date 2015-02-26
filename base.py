@@ -1,2 +1,2 @@
-API_ENDPOINT = 'http://api.glowfi.sh/'
+API_ENDPOINT = 'https://api.glowfi.sh/'
 API_VERSION = 'v1'
