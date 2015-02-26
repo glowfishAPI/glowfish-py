@@ -22,6 +22,7 @@ Get ready for some simple machine learning...
 	    'feature_name2': [9, 4, 5, 6, ...etc]
     }, { # the response set
 	    'class': [4, 3, 5, 6, ...etc]
+    })
 
 *Training using CSVs*
 
