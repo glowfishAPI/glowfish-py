@@ -8,7 +8,7 @@ glowfi.sh the Pythonic Way: Now with machine guns and rocket launchers.
 
 **Setup**
 
-    import glowfish
+    from glowfish import glowfish
     glower = glowfish.Glower('<GLOWFISH_SID>', '<GLOWFISH_AUTH_TOKEN>')
 
 **Useage**
