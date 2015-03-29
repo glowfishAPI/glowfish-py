@@ -6,23 +6,14 @@ class Glower(object):
 	sid 					= None
 	token 					= None
 	
-	set_name 				= "default"
-	
-	fail_if_mistakes		= False
-	delete_previous_data	= False
-	save_data				= False
-	stats					= False
-	hold					= False
-	update					= False
-	
-	max_number				= -1
-	accuracy				= False
-	group_max_number		= -1
-	
+	params					= {}
 
-	def __init__(self, sid, token):
+	def __init__(self, sid, token, **kwargs):
 		self.sid 	= sid
 		self.token 	= token
+		
+		for key, val in kwargs.iteritems():
+			self.params[key] = val
 		
 	def use(self, set_name="default"):
 		self.set_name = set_name
@@ -81,16 +72,40 @@ class Glower(object):
 		}
 		return self._request('feature_select', {}, files)
 		
+	def filter_train(self, userids, productids, ratings):
+		data = {
+			"userid": userids,
+			"productid": productids,
+			"ratings": ratings
+		}
+		
+		return self._request('filter_train', {'data_set': data})
+		
+	def filter_train_csv(self, data_set):
+		files = {
+			"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set
+		}
+		
+		return self._request('filter_train', {}, files)
+		
+	def filter_predict(self, userids, productids, ratings):
+		data = {
+			"userid": userids,
+			"productid": productids,
+			"ratings": ratings
+		}
+		
+		return self._request('filter_train', {'data_set': data})
+		
+	def filter_predict_csv(self, data_set):
+		files = {
+			"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set
+		}
+		
+		return self._request('filter_predict', {}, files)
+		
 	def _request(self, endpoint, data, files=None):
-		data['fail_if_mistakes'] = "true" if self.fail_if_mistakes else "false"
-		data['delete_previous_data'] = "true" if self.delete_previous_data else "false"
-		data['save_data'] = "true" if self.save_data else "false"
-		data['stats'] = "true" if self.stats else "false"
-		data['hold'] = "true" if self.hold else "false"
-		data['update'] = "true" if self.update else "false"
-		data['max_number'] = self.max_number
-		data['accuracy'] = "true" if self.accuracy else "false"
-		data['group_max_number'] = self.group_max_number
+		data.update(self.params)
 		
 		url = "%s%s/%s/" % (config.API_ENDPOINT, config.API_VERSION, endpoint)
 		if files:
@@ -102,3 +117,11 @@ class Glower(object):
 			return r.json()
 		except:
 			r.raise_for_status()
+			
+	def __getattr__(self, name):
+		if name in self.params:
+			return self.params[name]
+		return None
+			
+	def __setattr__(self, name, value):
+		self.params[name] = value

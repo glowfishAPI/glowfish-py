@@ -1,5 +1,5 @@
 
-glowfi.sh the Pythonic Way
+glowfi.sh the Pythonic Way: Now with machine guns and rocket launchers.
 -----------
 
 **Installation**
