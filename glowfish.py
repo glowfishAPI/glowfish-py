@@ -11,9 +11,7 @@ class Glower(object):
 	def __init__(self, _sid, _token, **kwargs):	
 		setattr(self, 'sid', _sid)
 		setattr(self, 'token', _token)
-		
-		print self.sid, self.token, _sid, _token
-		
+				
 		for key, val in kwargs.iteritems():
 			self.params[key] = val
 		
