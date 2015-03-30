@@ -106,10 +106,11 @@ class Glower(object):
 		
 	def _request(self, endpoint, data, files=None):
 		data.update(self.params)
+		
 		for key, val in data.iteritems():
 			if isinstance(val, bool):
-				data[key] = "true" if val is true else "false"
-				
+				data[key] = "true" if val is True else "false"
+								
 		url = "%s%s/%s/" % (config.API_ENDPOINT, config.API_VERSION, endpoint)
 		if files:
 			r = requests.post(url, data=data, files=files, auth=(self.sid, self.token))
@@ -127,7 +128,7 @@ class Glower(object):
 		return None
 			
 	def __setattr__(self, name, value):
-		if hasattr(self, name):
+		if name == "sid" or name == "token" or name == "params":
 			super(Glower, self).__setattr__(name, value)
 			return
 		
