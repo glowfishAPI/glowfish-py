@@ -17,7 +17,7 @@ Get ready for some simple machine learning...
 
 *Training*
 
-    glower.train({ # the data set
+    response = glower.train({ # the data set
 	    'feature_name1': [1, 2, 3, 4, ...etc],
 	    'feature_name2': [9, 4, 5, 6, ...etc]
     }, { # the response set
@@ -26,34 +26,34 @@ Get ready for some simple machine learning...
 
 *Training using CSVs*
 
-    glower.train_csv('./data_set.csv', './response.csv')
+    response = glower.train_csv('./data_set.csv', './response.csv')
 
 *Predict*
 It's important to note that predicting will throw an error if you have not trained against a data set first.
 
-    glower.predict({ # the data set
+    response = glower.predict({ # the data set
 	    'feature_name1': [1, 2, 3, 4, ...etc],
 	    'feature_name2': [9, 4, 5, 6, ...etc]
     })
     
 *Predict using CSVs*
 
-    glower.predict_csv('./data_set.csv')
+    response = glower.predict_csv('./data_set.csv')
 
 *Clustering*
 
-    glower.cluster({ # the data set
+    response = glower.cluster({ # the data set
 	    'feature_name1': [1, 2, 3, 4, ...etc],
 	    'feature_name2': [9, 4, 5, 6, ...etc]
     })
 
 *Clustering using CSVs*
 
-    glower.cluster_csv('./data_set.csv')
+    response = glower.cluster_csv('./data_set.csv')
 
 *Feature Selection*
 
-    glower.feature_select({ # the data set
+    response = glower.feature_select({ # the data set
 	    'feature_name1': [1, 2, 3, 4, ...etc],
 	    'feature_name2': [9, 4, 5, 6, ...etc]
     }, { # the response set
@@ -62,7 +62,15 @@ It's important to note that predicting will throw an error if you have not train
     
 *Feature Selection using CSVs*
 
-    glower.feature_select_csv('./data_set.csv', './response.csv')
+    response = glower.feature_select_csv('./data_set.csv', './response.csv')
+    
+*Filter Train*
+    # userids, productids, then ratings
+    response = glower.filter_train(userids=[1, 2, 3, 4, ...etc],productids=[1, 2, 3, 4, ...etc],ratings=[1, 2, 3, 4, ...etc])
+    
+*Filter Predict*
+    # userids, productids, then ratings
+    response = glower.filter_predict(userids=[1, 2, 3, 4, ...etc],productids=[1, 2, 3, 4, ...etc],ratings=[1, 2, 3, 4, ...etc])
 
 **CSV File Format**
 
