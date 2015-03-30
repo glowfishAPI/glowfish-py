@@ -106,6 +106,9 @@ class Glower(object):
 		
 	def _request(self, endpoint, data, files=None):
 		data.update(self.params)
+		for key, val in data.iteritems():
+			if isinstance(val, bool):
+				data[key] = "true" if val is true else "false"
 				
 		url = "%s%s/%s/" % (config.API_ENDPOINT, config.API_VERSION, endpoint)
 		if files:
