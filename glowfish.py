@@ -8,9 +8,11 @@ class Glower(object):
 	
 	params					= {}
 
-	def __init__(self, sid, token, **kwargs):
-		self.sid 	= sid
-		self.token 	= token
+	def __init__(self, _sid, _token, **kwargs):	
+		setattr(self, 'sid', _sid)
+		setattr(self, 'token', _token)
+		
+		print self.sid, self.token, _sid, _token
 		
 		for key, val in kwargs.iteritems():
 			self.params[key] = val
@@ -106,7 +108,7 @@ class Glower(object):
 		
 	def _request(self, endpoint, data, files=None):
 		data.update(self.params)
-		
+				
 		url = "%s%s/%s/" % (config.API_ENDPOINT, config.API_VERSION, endpoint)
 		if files:
 			r = requests.post(url, data=data, files=files, auth=(self.sid, self.token))
@@ -124,4 +126,8 @@ class Glower(object):
 		return None
 			
 	def __setattr__(self, name, value):
+		if hasattr(self, name):
+			super(Glower, self).__setattr__(name, value)
+			return
+		
 		self.params[name] = value
