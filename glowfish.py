@@ -76,7 +76,7 @@ class Glower(object):
 		data = {
 			"userid": userids,
 			"productid": productids,
-			"ratings": ratings
+			"rating": ratings
 		}
 		
 		return self._request('filter_train', {'data_set': data})
@@ -92,10 +92,10 @@ class Glower(object):
 		data = {
 			"userid": userids,
 			"productid": productids,
-			"ratings": ratings
+			"rating": ratings
 		}
 		
-		return self._request('filter_train', {'data_set': data})
+		return self._request('filter_predict', {'data_set': data})
 		
 	def filter_predict_csv(self, data_set):
 		files = {
