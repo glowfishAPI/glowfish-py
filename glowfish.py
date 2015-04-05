@@ -44,7 +44,7 @@ class Glower(object):
 			"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set,
 			"response": open(response, 'rb') if isinstance(response, (str, unicode)) else response
 		}
-		return self._request('predict', {}, files)
+		return self._request('predict/csv', {}, files)
 		
 	def cluster(self, data_set):
 		data = {
@@ -56,7 +56,7 @@ class Glower(object):
 		files = {
 			"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set
 		}
-		return self._request('cluster', {}, files)
+		return self._request('cluster/csv', {}, files)
 		
 	def feature_select(self, data_set, response):
 		data = {
@@ -70,7 +70,7 @@ class Glower(object):
 			"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set,
 			"response": open(response, 'rb') if isinstance(response, (str, unicode)) else response
 		}
-		return self._request('feature_select', {}, files)
+		return self._request('feature_select/csv', {}, files)
 		
 	def filter_train(self, userids, productids, ratings):
 		data = {
@@ -86,7 +86,7 @@ class Glower(object):
 			"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set
 		}
 		
-		return self._request('filter_train', {}, files)
+		return self._request('filter_train/csv', {}, files)
 		
 	def filter_predict(self, userids, productids, ratings):
 		data = {
