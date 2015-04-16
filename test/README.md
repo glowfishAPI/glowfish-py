@@ -11,13 +11,13 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
 
 **Steps for glowfi.sh Python Demo**
 
-*1. Download [movie_rating_train.json](https://github.com/glowfishAPI/glowfish-py/blob/master/test/movie_rating_train.json) and [movie_rating_prediction.json](https://github.com/glowfishAPI/glowfish-py/blob/master/test/movie_rating_prediction.json) (i.e., right-click to download directly)*
+*1. Download [movie_rating_train.json](https://github.com/glowfishAPI/glowfish-py/blob/master/test/movie_rating_train.json) and [movie_rating_prediction.json](https://github.com/glowfishAPI/glowfish-py/blob/master/test/movie_rating_prediction.json) (i.e., right-click links to download directly)*
 
 *2. Install glowfish from PyPi:*
 
     pip install glowfish
 
-*3. Startup python interactive shell (in the same directory as movie_rating_train.json):*
+*3. Startup python interactive shell (in the same directory as downloaded json files):*
 
     python
 
@@ -31,7 +31,7 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
         train_data['data_set']['rating'])
     print train_return
     
-    Note: The "auth key" and "auth secret key" are located at the top of [your glowfi.sh app admin  panel]https://api.glowfi.sh/admin/app/.
+    Note: The "auth key" and "auth secret key" are located at the top of [your glowfi.sh app admin  panel]https://api.glowfi.sh/admin/app/. If you do not have access to glowfi.sh yet, please [request access here](https://glowfi.sh/beta/).
 
 *5. You should see the following print out:*
 
