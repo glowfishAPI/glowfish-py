@@ -29,7 +29,7 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
         train_data['data_set']['rating'])
     print train_return
 
-*4. You should see the following print out:
+*4. You should see the following print out:*
 
     {u'status': {u'status': u'SUCCESS', u'code': u'200.0', u'codeMessage': u'Api completed successfully'},
     u'result': {u'metrics': {u'rows': 80000, u'time': u'2.62 sec'}, u'model_status': u'updated_existing'}}
