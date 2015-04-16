@@ -3,11 +3,11 @@ glowfi.sh python wrapper demo instructions
 
 Here we will use sample user-movie rating data to train a glowfi.sh recommendation model (using 0-5 ratings) and then ask glowfi.sh to predict the movie ratings for 20 new users and compare those to actual recorded ratings for accuracy.
 
-Data description (http://files.grouplens.org/datasets/movielens/ml-100k-README.txt)
+More info on the MovieLens data set is [here](http://files.grouplens.org/datasets/movielens/ml-100k-README.txt)
 
-We assume Python 2.x and pip are installed already. If not, links below give 1 line install instructions for both.
-Install for Python on Windows (https://www.python.org/downloads/windows/)
-Install for PIP on Windows (http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows)
+We assume Python 2.x and pip are installed already. If not, the folowing links below give 1 line install instructions for both: 
+[Install for Python on Windows](https://www.python.org/downloads/windows/) and 
+[Install for PIP on Windows](http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows).
 
 **Steps for glowfi.sh Python Demo**
 
