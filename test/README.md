@@ -30,6 +30,8 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
     train_return = glower.filter_train(train_data['data_set']['userid'],train_data['data_set']['productid'],
         train_data['data_set']['rating'])
     print train_return
+    
+    Note: The "auth key" and "auth secret key" are located at the top of [your glowfi.sh app admin  panel]https://api.glowfi.sh/admin/app/.
 
 *5. You should see the following print out:*
 
