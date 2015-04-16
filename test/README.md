@@ -41,7 +41,7 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
         predict_data['data_set']['rating'])
     print predict_return
 
-*6 You should see the following return from glowfi.sh "print predict_train":
+*6 You should see the following return from glowfi.sh "print predict_train":*
 
     {u'status': {u'status': u'SUCCESS', u'code': u'200.0', u'codeMessage': u'Api completed successfully'},
     u'result': {u'metrics': {u'rows': 20, u'time': u'0.55 sec'},
@@ -52,4 +52,4 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
         2.4121369232352645],
     u'mae_mean_rating': 1.11, u'rmse_mean_rating': 1.3655721804330099}}}
 
-*7 The "predictions"["predictions"] key shows the estimated ratings for the 20 userids passed to glowfi.sh from 'movie_rating_prediction.json'. The "predictions"["mae_best"] key gives the error of our estimated ratings compared to actual user ratings in 'movie_rating_prediction.json' (0.94 Stars out of 5 stars).
+The "predictions"["predictions"] key shows the estimated ratings for the 20 userids passed to glowfi.sh from  'movie_rating_prediction.json'. The "predictions"["mae_best"] key gives the error of our estimated ratings compared to actual user ratings in 'movie_rating_prediction.json' (0.94 Stars out of 5 stars).
