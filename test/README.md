@@ -1,7 +1,7 @@
 glowfi.sh python wrapper demo instructions
 -----------
 
-Here we will use sample user-movie rating data to train a glowfi.sh recommendation model (using 0-5 ratings) and then ask glowfi.sh to predict the movie ratings for 20 new users and compare those to actual recorded ratings for accuracy.
+Here we will use sample user-movie rating data  (using a 0-5 rating system) to train a glowfi.sh recommendation model and then ask glowfi.sh to predict the movie ratings for 20 new users and compare those to actual recorded ratings for accuracy.
 
 More info on the MovieLens data set is [here](http://files.grouplens.org/datasets/movielens/ml-100k-README.txt).
 
