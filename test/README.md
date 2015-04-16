@@ -6,8 +6,8 @@ Here we will use sample user-movie rating data  (using a 0-5 rating system) to t
 More info on the MovieLens data set is [here](http://files.grouplens.org/datasets/movielens/ml-100k-README.txt).
 
 We assume Python 2.x and pip are installed already. If not, the folowing links below give 1 line install instructions for both: 
-[Install for Python on Windows](https://www.python.org/downloads/windows/) and 
-[Install for PIP on Windows](http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows).
+[Install for Python on Windows](https://www.python.org/downloads/windows/),  
+[Install for PIP on Windows](http://stackoverflow.com/questions/4750806/how-to-install-pip-on-windows), and [Install for *nix](https://pip.pypa.io/en/latest/installing.html).
 
 **Steps for glowfi.sh Python Demo**
 
