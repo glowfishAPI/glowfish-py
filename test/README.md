@@ -26,7 +26,8 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
 
     glower = glowfish.Glower(<auth key>,<auth secret key>)
     train_data = json.load(open('movie_rating_train.json'))
-    train_return = glower.filter_train(train_data['data_set']['userid'],train_data['data_set']['productid'],train_data['data_set']['rating'])
+    train_return = glower.filter_train(train_data['data_set']['userid'],train_data['data_set']['productid'],
+        train_data['data_set']['rating'])
     print train_return
     
 *4. You should see the following return from glowfi.sh print :
