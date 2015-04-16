@@ -11,11 +11,11 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
 
 **Steps for glowfi.sh Python Demo**
 
-*1. install glowfish from PyPi:*
+*1. Install glowfish from PyPi:*
 
     pip install glowfish
 
-*2. startup python interactive shell (in the same directory as movie_rating_train.json):*
+*2. Startup python interactive shell (in the same directory as movie_rating_train.json):*
 
     python
 
