@@ -11,15 +11,17 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
 
 **Steps for glowfi.sh Python Demo**
 
-*1. Install glowfish from PyPi:*
+*1. Download movie_rating_train.json and movie_rating_prediction.json (i.e., right-click links above to download directly)*
+
+*2. Install glowfish from PyPi:*
 
     pip install glowfish
 
-*2. Startup python interactive shell (in the same directory as movie_rating_train.json):*
+*3. Startup python interactive shell (in the same directory as movie_rating_train.json):*
 
     python
 
-*3. To train the glowfi.sh model, enter the following lines:*
+*5. To train the glowfi.sh model, enter the following lines:*
 
     import json
     import glowfish.glowfish as glowfish
@@ -29,19 +31,19 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
         train_data['data_set']['rating'])
     print train_return
 
-*4. You should see the following print out:*
+*5. You should see the following print out:*
 
     {u'status': {u'status': u'SUCCESS', u'code': u'200.0', u'codeMessage': u'Api completed successfully'},
     u'result': {u'metrics': {u'rows': 80000, u'time': u'2.62 sec'}, u'model_status': u'updated_existing'}}
 
-*5. Now run glowfi.sh prediction file to get estimated rating for 20 new users:*
+*6. Now run glowfi.sh prediction file to get estimated rating for 20 new users:*
 
     predict_data = json.load(open('movie_rating_prediction.json'))
     predict_return = glower.filter_predict(predict_data['data_set']['userid'],predict_data['data_set']['productid'],
         predict_data['data_set']['rating'])
     print predict_return
 
-*6 You should see the following return from glowfi.sh "print predict_train":*
+*7. You should see the following return from glowfi.sh "print predict_train":*
 
     {u'status': {u'status': u'SUCCESS', u'code': u'200.0', u'codeMessage': u'Api completed successfully'},
     u'result': {u'metrics': {u'rows': 20, u'time': u'0.55 sec'},
