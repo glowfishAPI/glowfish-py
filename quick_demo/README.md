@@ -1,4 +1,4 @@
-glowfi.sh python wrapper demo instructions
+glowfi.sh python quick demo instructions
 -----------
 
 Here we will use sample user-movie rating data  (using a 0-5 rating system) to train a glowfi.sh recommendation model and then ask glowfi.sh to predict the movie ratings for 20 new users and compare those to actual recorded ratings for accuracy.
