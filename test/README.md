@@ -45,8 +45,11 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
 
     {u'status': {u'status': u'SUCCESS', u'code': u'200.0', u'codeMessage': u'Api completed successfully'},
     u'result': {u'metrics': {u'rows': 20, u'time': u'0.55 sec'},
-    u'predictions': {u'rmse_best': 1.1372652398974326, u'mae_best': 0.94, u'predictions': [4.115536580593806,         3.0373570509411114, 3.01191464889828, 3.4511459029840914, 3.163741539386915, 3.4648457452920924, 3.5163270846791916, 4.022362015581322, 3.5763795626559816, 3.4838059087502207, 3.837655505048551, 3.3454290113185876, 2.883796523224529, 4.035645217486952, 2.5771215401952916, 4.08059468678164, 3.1688319000154226, 3.2668625899622885, 3.9314662744373345, 2.4121369232352645], u'mae_mean_rating': 1.11, u'rmse_mean_rating': 1.3655721804330099}}}
+    u'predictions': {u'rmse_best': 1.1372652398974326, u'mae_best': 0.94, u'predictions': [4.115536580593806, 
+        3.0373570509411114, 3.01191464889828, 3.4511459029840914, 3.163741539386915, 3.4648457452920924, 3.5163270846791916,
+        4.022362015581322, 3.5763795626559816, 3.4838059087502207, 3.837655505048551, 3.3454290113185876, 2.883796523224529,
+        4.035645217486952, 2.5771215401952916, 4.08059468678164, 3.1688319000154226, 3.2668625899622885, 3.9314662744373345,
+        2.4121369232352645],
+    u'mae_mean_rating': 1.11, u'rmse_mean_rating': 1.3655721804330099}}}
 
-*7 The "predictions"["predictions"] key shows the estimated ratings for the 20 userids passed to glowfi.sh from 'movie_rating_prediction.json'
-
-The "predictions"["mae_best"] key gives the error of our estimated ratings compared to actual user ratings in 'movie_rating_prediction.json' (0.94 Stars out of 5 stars)
+*7 The "predictions"["predictions"] key shows the estimated ratings for the 20 userids passed to glowfi.sh from 'movie_rating_prediction.json'. The "predictions"["mae_best"] key gives the error of our estimated ratings compared to actual user ratings in 'movie_rating_prediction.json' (0.94 Stars out of 5 stars).
