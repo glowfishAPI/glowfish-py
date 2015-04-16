@@ -52,4 +52,4 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
         2.4121369232352645],
     u'mae_mean_rating': 1.11, u'rmse_mean_rating': 1.3655721804330099}}}
 
-The "predictions"["predictions"] key shows the estimated ratings for the 20 userids passed to glowfi.sh from  'movie_rating_prediction.json'. The "predictions"["mae_best"] key gives the error of our estimated ratings compared to actual user ratings in 'movie_rating_prediction.json' (0.94 Stars out of 5 stars).
+The "predictions.predictions" key shows the estimated ratings for the 20 userids passed to glowfi.sh from  'movie_rating_prediction.json'. The "predictions.mae_best" key gives the error of our estimated ratings compared to actual user ratings in 'movie_rating_prediction.json' (0.94 Stars out of 5 stars).
