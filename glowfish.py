@@ -7,6 +7,7 @@ class Glower(object):
 	token 					= None
 	
 	params					= {}
+	config					= config
 
 	def __init__(self, _sid, _token, **kwargs):	
 		setattr(self, 'sid', _sid)
@@ -111,7 +112,7 @@ class Glower(object):
 			if isinstance(val, bool):
 				data[key] = "true" if val is True else "false"
 								
-		url = "%s%s/%s/" % (config.API_ENDPOINT, config.API_VERSION, endpoint)
+		url = "%s%s/%s/" % (self.config.API_ENDPOINT, self.config.API_VERSION, endpoint)
 		if files:
 			r = requests.post(url, data=data, files=files, auth=(self.sid, self.token))
 		else:
