@@ -14,7 +14,7 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
 
 *2. Install glowfish from PyPi:*
 
-    pip install glowfish
+    pip install glowfi.sh
 
 *3. Startup python interactive shell (in the same directory as downloaded json files):*
 
