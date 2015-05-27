@@ -48,7 +48,7 @@ Note: The "auth key" and "auth secret key" are located at the top of your app pa
 
     {u'status': u'SUCCESS', u'code': u'200.0', u'codeMessage': u'Api completed successfully'} {u'rows': 4118, u'time': u'1.12 sec'} {u'recall': [0.88, 0.64], u'f1_scores': [0.91, 0.5], u'precision': [0.95, 0.41], u'class_names': [u'no', u'yes'], u'Composite_Accuracy': 0.86}
 
-*8. Enter this to see the actual predictions:*
+*8. To see the actual predictions:*
 
     print predict_return["result"]["predictions"]["class_predictions"]
 
