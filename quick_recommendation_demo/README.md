@@ -10,7 +10,7 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
 
 **Steps for glowfi.sh Python Demo**
 
-*1. Download [movie_rating_train.json](https://raw.githubusercontent.com/glowfishAPI/glowfish-py/master/quick_demo/movie_rating_train.json) and [movie_rating_prediction.json](https://raw.githubusercontent.com/glowfishAPI/glowfish-py/master/quick_demo/movie_rating_prediction.json) (i.e., right-click on links to download directly).*
+*1. Download [movie_rating_train.json](https://raw.githubusercontent.com/glowfishAPI/glowfish-py/master/quick_recommendation_demo/movie_rating_train.json) and [movie_rating_prediction.json](https://raw.githubusercontent.com/glowfishAPI/glowfish-py/master/quick_recommendation_demo/movie_rating_prediction.json) (i.e., right-click on links to download directly).*
 
 *2. Install glowfish from PyPi:*
 
