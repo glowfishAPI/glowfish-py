@@ -12,9 +12,9 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
 
 *1. Download [bank_profile_train.json](https://raw.githubusercontent.com/glowfishAPI/glowfish-py/master/quick_analytics_demo/bank_profile_train.json) and [bank_profile_predict.json](https://raw.githubusercontent.com/glowfishAPI/glowfish-py/master/quick_analytics_demo/bank_profile_predict.json) (i.e., right-click on links to download directly).*
 
-*2. Install glowfish from PyPi:*
+*2. Install latest glowfish from PyPi:*
 
-    pip install glowfi.sh
+    pip install glowfi.sh --upgrade
 
 *3. Startup python interactive shell (in the same directory as downloaded json files):*
 
