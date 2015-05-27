@@ -20,7 +20,7 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
 
     python
 
-*5. To train the glowfi.sh model, enter the following lines:*
+*4. To train the glowfi.sh model, enter the following lines:*
 
     import json
     import glowfish.glowfish as glowfish
