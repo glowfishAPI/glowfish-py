@@ -56,7 +56,7 @@ Note: The "auth key" and "auth secret key" are located at the top of your app pa
 
     [<prediction1>,<prediction2>,...<predictionN>]
 
-For more info on the full structure of predictions returns, please see [the prediction api doc](http://glowfish.readme.io/v1.0/docs/predict).
+For full info on the structure of predict's json output, please see [the prediction api doc](http://glowfish.readme.io/v1.0/docs/predict).
 
 The 'predictions.class_predictions' key shows the estimated responses for the 4000+ clients passed to glowfi.sh from  'bank_profile_predict.json'. The 'composite_accuracy' key gives the weighted mean of class f1 scores for all estimations compared to actual user responses in 'bank_profile_predict.json' (86% in this case).
 
