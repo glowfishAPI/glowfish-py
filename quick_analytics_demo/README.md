@@ -10,7 +10,7 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
 
 **Steps for glowfi.sh Python Analytics Demo**
 
-*1. Download [bank_profile_train.json](https://raw.githubusercontent.com/glowfishAPI/glowfish-py/master/quick_analytics_demo/bank_profile_train.json) and [bank_profile_predict.json](https://raw.githubusercontent.com/glowfishAPI/glowfish-py/master/quick_analytics_demo/bank_profile_predict.json).*
+*1. Download [bank_profile_train.json](https://raw.githubusercontent.com/glowfishAPI/glowfish-py/master/quick_analytics_demo/bank_profile_train.json) and [bank_profile_predict.json](https://raw.githubusercontent.com/glowfishAPI/glowfish-py/master/quick_analytics_demo/bank_profile_predict.json) (right click to download).*
 
 *2. Install latest glowfish from PyPI:*
 
