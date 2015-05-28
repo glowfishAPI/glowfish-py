@@ -24,7 +24,7 @@ We assume Python 2.x and pip are installed already. If not, the folowing links b
 
     import json
     import glowfish.glowfish as glowfish
-    glower = glowfish.Glower(<auth key>,<auth secret key>)
+    glower = glowfish.Glower("<auth key>","<auth secret key>")
     glower.reset_model = "true"  #Specifies new learning model
     train_data = json.load(open('bank_profile_train.json'))
     train_return = glower.train(train_data['data_set'],train_data['response'])
