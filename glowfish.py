@@ -44,9 +44,12 @@ class Glower(object):
 		
 	def predict_csv(self, data_set, response=None):
 		files = {
-			"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set,
-			"response": open(response, 'rb') if isinstance(response, (str, unicode)) else response
+			"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set
 		}
+		
+		if response:
+			files['response'] = open(response, 'rb') if isinstance(response, (str, unicode)) else response
+		
 		return self._request('predict/csv', {}, files)
 		
 	def cluster(self, data_set):
