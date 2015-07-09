@@ -45,7 +45,7 @@ class Glower(object):
 		data = {"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set}
 		if isinstance(time, list):
 			data["time"] = open(time, 'rb') if isinstance(time, (str, unicode)) else time
-		return self._request('anomaly_detect')
+		return self._request('anomaly_detect/csv')
 		
 	def predict(self, data_set, response=None):
 		data = {
