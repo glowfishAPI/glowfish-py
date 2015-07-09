@@ -106,12 +106,14 @@ class Glower(object):
 		
 		return self._request('filter_train/csv', {}, files)
 		
-	def filter_predict(self, userids, productids, ratings):
+	def filter_predict(self, userids, productids, ratings=None):
 		data = {
 			"userid": userids,
-			"productid": productids,
-			"rating": ratings
+			"productid": productids
 		}
+		
+		if ratings is not None:
+			data["ratings"] = ratings
 		
 		return self._request('filter_predict', {'data_set': data})
 		
