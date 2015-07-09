@@ -36,15 +36,15 @@ class Glower(object):
 		return self._request('train/csv', {}, files)
 		
 	def anomaly_detection(self, data_set, time=None):
-		data = {"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set}
-		if isinstance(time, list):
-			data["time"] = open(time, 'rb') if isinstance(time, (str, unicode)) else time
-		return self._request('anomaly_detect')
-		
-	def anomaly_detection_csv(self, data_set, time=None):
 		data = {"data_set": data_set}
 		if isinstance(time, list):
 			data["time"] = time
+		return self._request('anomaly_detect')
+		
+	def anomaly_detection_csv(self, data_set, time=None):
+		data = {"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set}
+		if isinstance(time, list):
+			data["time"] = open(time, 'rb') if isinstance(time, (str, unicode)) else time
 		return self._request('anomaly_detect')
 		
 	def predict(self, data_set, response=None):
