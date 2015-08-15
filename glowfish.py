@@ -39,13 +39,25 @@ class Glower(object):
 		data = {"data_set": data_set}
 		if isinstance(time, list):
 			data["time"] = time
-		return self._request('anomaly_detect')
+		return self._request('anomaly_detect', data)
 		
 	def anomaly_detection_csv(self, data_set, time=None):
 		data = {"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set}
 		if isinstance(time, list):
 			data["time"] = open(time, 'rb') if isinstance(time, (str, unicode)) else time
-		return self._request('anomaly_detect/csv')
+		return self._request('anomaly_detect/csv', {}, data)
+		
+	def signal_extract(self, data_set, time=None):
+		data = {"data_set": data_set}
+		if isinstance(time, list):
+			data["time"] = time
+		return self._request('signal_extract', data)
+		
+	def signal_extract_csv(self, data_set, time=None):
+		data = {"data_set": open(data_set, 'rb') if isinstance(data_set, (str, unicode)) else data_set}
+		if isinstance(time, list):
+			data["time"] = open(time, 'rb') if isinstance(time, (str, unicode)) else time
+		return self._request('signal_extract/csv', {}, data)
 		
 	def predict(self, data_set, response=None):
 		data = {
